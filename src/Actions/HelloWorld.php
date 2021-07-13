@@ -9,7 +9,7 @@ use Psr\Http\Message\ServerRequestInterface;
 
 class HelloWorld
 {
-    public function __invoke(ServerRequestInterface $request): ResponseInterface
+    public function __invoke(ServerRequestInterface $request, array $args = []): ResponseInterface
     {
         return new HtmlResponse('<h1>Hello, World!</h1>');
     }
