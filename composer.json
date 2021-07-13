@@ -1,0 +1,55 @@
+{
+  "name": "brenoroosevelt/app",
+  "description": "Skeleton application for rapid development",
+  "keywords": [
+    "rest",
+    "router",
+    "dispatcher",
+    "psr7",
+    "psr15"
+  ],
+  "homepage": "http://github.com/brenoroosevelt/app",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Breno Roosevelt",
+      "email": "breno.roosevelt@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.4 || ^8.0",
+    "ext-json": "*",
+    "monolog/monolog": "^2.2",
+    "symfony/cache": "^5",
+    "brenoroosevelt/habemus": "^1.1",
+    "brenoroosevelt/http": "^0"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^0.12.90",
+    "phpunit/phpunit": "^9.0",
+    "squizlabs/php_codesniffer": "3.5.*"
+  },
+  "config": {
+    "process-timeout": 0,
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "start": "php -S localhost:8080 -t web",
+    "test": "phpunit",
+    "check": [
+      "phpunit",
+      "phpstan",
+      "phpcs -p src tests"
+    ]
+  }
+}
