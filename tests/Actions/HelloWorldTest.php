@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace Tests\Actions;
 
 use App\Actions\HelloWorld;
-use BrenoRoosevelt\Http\ServerRequest;
+use Middlewares\Utils\Factory;
 use Tests\TestCase;
 
 class HelloWorldTest extends TestCase
@@ -13,7 +13,8 @@ class HelloWorldTest extends TestCase
     public function shouldSayHello()
     {
         $helloWorld = new HelloWorld();
-        $response = $helloWorld(ServerRequest::fromGlobals());
+        $request = Factory::getServerRequestFactory()->createServerRequest('GET', '/');
+        $response = $helloWorld($request);
         $this->assertEquals('<h1>Hello, World!</h1>', (string) $response->getBody());
     }
 }
