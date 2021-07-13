@@ -11,6 +11,6 @@ class HelloWorld
 {
     public function __invoke(ServerRequestInterface $request): ResponseInterface
     {
-        return new HtmlResponse("<h1>Olá, Mundo!</h1>");
+        return new HtmlResponse('<h1>Hello, World!</h1>');
     }
 }
