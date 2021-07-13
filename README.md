@@ -8,7 +8,7 @@ This package is not recommended for use in production environment.
 composer create-project brenoroosevelt/app [app-name]
 ```
 
-* Ensure `logs/` is web writable.
+* Ensure `tmp/` is web writable.
 
 ## Development environment
 
