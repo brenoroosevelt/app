@@ -1,17 +1,16 @@
 # Skeleton App
 
+This package is not recommended for use in production environment.
+
 ## Install 
 
 ```bash
 composer create-project brenoroosevelt/app [app-name]
 ```
 
-Replace `[app-name]` with the desired directory name for your new application.
-
-* Point your virtual host document root to your new application's `public/` directory.
 * Ensure `logs/` is web writable.
 
-# Development environment
+## Development environment
 
 ```bash
 cd [app-name]
